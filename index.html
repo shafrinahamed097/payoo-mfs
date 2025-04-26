@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo MFS</title>
+    <!-- Added DASISY UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <main class="flex justify-center">
+        <!-- Login Form -->
+
+
+        <div class="mockup-phone bg-white">
+            <div class="mockup-phone-camera"></div>
+            <div class="mockup-phone-display text-white grid place-content-center">
+                <div class="hero min-h-screen">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card w-full max-w-sm shrink-0 shadow-2xl bg-cyan-100 min-h-80">
+                            <div class="card-body">
+                                <!-- Form Start -->
+                                <form>
+                                    <fieldset class="fieldset">
+                                        <label class="label text-black font-semibold">Phone Number</label>
+                                        <input id="phone-number" type="tel" class="input text-black"
+                                            placeholder="Enter Your Phone Number" />
+                                        <label class="label text-black font-semibold">Pin</label>
+                                        <input type="password" class="input input-bordered text-black"
+                                            placeholder="Your Pin" autocomplete="off" required />
+                                        <div><a class="text-black font-semibold link link-hover">Forgot password?</a>
+                                        </div>
+                                        <button id="btn-login" type="submit" class="btn btn-primary mt-4">Login</button>
+                                    </fieldset>
+                                </form>
+                                <!-- Form End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
