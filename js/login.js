@@ -36,8 +36,9 @@ document.getElementById('btn-login').addEventListener('click', function (event) 
     const phoneNumber = document.getElementById('phone-number').value;
     const pin = document.getElementById('pin-number').value;
 
-    if (phoneNumber === "123456" && pin === "123546") {
+    if (phoneNumber === "123456" && pin === "123456") {
         console.log("Your Logged in");
+        window.location.href = '/home.html';
     } else {
         alert("Phone Number Or PIN number Wrong")
     }
