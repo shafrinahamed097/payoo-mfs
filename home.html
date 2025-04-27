@@ -37,19 +37,41 @@
                 </div>
                 <div class="divider"></div>
                 <!-- Add Money Form Start -->
-                <form class="m-5 bg-blue-950 rounded-lg ">
-                    <fieldset class="fieldset m-5">
-                        <label class="label text-white font-semibold">Amount</label>
-                        <input id="input-add-money" type="tel" class="input text-black" placeholder="Enter Amount" />
-                        <label class="label text-white font-semibold">Pin</label>
-                        <input id="input-pin-number" type="password" class="input input-bordered text-black"
-                            placeholder="Your Pin" autocomplete="off" required />
+                <div class="hidden">
+                    <form class="m-5 bg-blue-950 rounded-lg card  ">
+                        <fieldset class="fieldset m-5">
+                            <label class="label text-white font-semibold">Amount</label>
+                            <input id="input-add-money" type="tel" class="input text-black"
+                                placeholder="Enter Amount" />
+                            <label class="label text-white font-semibold">Pin</label>
+                            <input id="input-pin-number" type="password" class="input input-bordered text-black"
+                                placeholder="Your Pin" autocomplete="off" required />
 
-                        <button id="btn-add-money" type="submit" class="btn btn-primary mt-4 r">Add Money</button>
-                    </fieldset>
-                </form>
+                            <button id="btn-add-money" type="submit" class="btn btn-primary mt-4 r">Add Money</button>
+                        </fieldset>
+                    </form>
+                </div>
 
                 <!-- Add Money Form End -->
+
+                <!-- Cash Out Start -->
+
+                <div>
+                    <form class="m-5 bg-blue-950 rounded-lg card  ">
+                        <fieldset class="fieldset m-5">
+                            <label class="label text-white font-semibold">Amount</label>
+                            <input id="input-cash-out-money" type="tel" class="input text-black"
+                                placeholder="Enter Amount" />
+                            <label class="label text-white font-semibold">Pin</label>
+                            <input id="input-pin-number" type="password" class="input input-bordered text-black"
+                                placeholder="Your Pin" autocomplete="off" required />
+
+                            <button id="btn-cash-out" type="submit" class="btn btn-primary mt-4 r">Cash Out</button>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <!-- Cash Out End -->
 
             </div>
 
