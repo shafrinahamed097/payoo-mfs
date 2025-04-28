@@ -25,8 +25,9 @@ document.getElementById('btn-add-money').addEventListener("click", function (eve
 
 
     // get money and the pin number
-    const addMoney = document.getElementById('input-add-money').value;
-    const pinNumber = document.getElementById('input-pin-number').value;
+    const addMoney = getInputFieldValueById('input-add-money')
+    const pinNumber = getInputFieldValueById('input-pin-number');
+
 
     if (isNaN(addMoney)) {
         alert("Failed to add money");
@@ -34,14 +35,13 @@ document.getElementById('btn-add-money').addEventListener("click", function (eve
     }
 
 
-    if (pinNumber === "1234") {
+    if (pinNumber === 1234) {
         // add money to the account
-        const balance = document.getElementById('account-balance').innerText;
-        const balanceNumber = parseFloat(balance);
-        const addMoneyNumber = parseFloat(addMoney);
+        const balance = getTextFieldValueById('account-balance')
+
 
         // new balance
-        const newBalance = balanceNumber + addMoneyNumber;
+        const newBalance = balance + addMoney;
         document.getElementById('account-balance').innerText = newBalance;
 
         //    add to transaction history
@@ -58,7 +58,6 @@ document.getElementById('btn-add-money').addEventListener("click", function (eve
 
 
 });
-
 
 
 

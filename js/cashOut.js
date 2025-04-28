@@ -1,39 +1,42 @@
 // Cash Out
 
+
+
+
 document.getElementById('btn-cash-out').addEventListener('click', function (event) {
     event.preventDefault();
 
-    const cashOutBalance = document.getElementById('input-cash-out-money').value;
-    const pinNumber = document.getElementById('cash-out-pin-number').value;
-    if (isNaN(cashOutBalance)) {
-        alert("Failed to add money");
+    const cashOut = getInputFieldValueById('input-cash-out-money');
+    if (isNaN(cashOut)) {
+        alert("Failed to cash out");
         return;
     }
+    const pinNumber = getInputFieldValueById('cash-out-pin-number');
 
-    if (pinNumber === "1234") {
-        const balance = document.getElementById('account-balance').innerText;
-        if (cashOutBalance > balance) {
-            alert("You do not have enough money to CashOut");
-            return;
 
-        }
-        const previousBalance = parseFloat(balance);
-        const withdrawBalance = parseFloat(cashOutBalance);
 
-        const newBalance = previousBalance - withdrawBalance;
+
+    if (pinNumber === 1234) {
+        const balance = getTextFieldValueById('account-balance');
+        const newBalance = balance - cashOut;
         document.getElementById('account-balance').innerText = newBalance;
 
         // add to transaction history
         const div = document.createElement('div');
         div.classList.add('bg-yellow-300');
         div.innerHTML = `
-        <h4 class="text-2xl font-bold">Cash Out</h4>  
-        <p>${cashOutBalance} TK. withdraw. New Balance ${newBalance} TK.</p>      
-        `
+    <h4 class = "text-2xl font-bold">Cash Out</h4>
+    <p class = "text-black">${cashOut} TK. & New Balance ${newBalance} TK.</p>
+    
+    `
+        document.getElementById("transaction-history-section").appendChild(div);
 
-        document.getElementById('transaction-container').appendChild(div);
     } else {
-        alert("No money for you... Go to the hell!");
+        alert("Something went wrong! Please try again");
     }
+
+
+
+
 
 });
