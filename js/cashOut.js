@@ -12,6 +12,11 @@ document.getElementById('btn-cash-out').addEventListener('click', function (even
 
     if (pinNumber === "1234") {
         const balance = document.getElementById('account-balance').innerText;
+        if (cashOutBalance > balance) {
+            alert("You do not have enough money to CashOut");
+            return;
+
+        }
         const previousBalance = parseFloat(balance);
         const withdrawBalance = parseFloat(cashOutBalance);
 
