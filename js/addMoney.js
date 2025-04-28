@@ -28,6 +28,11 @@ document.getElementById('btn-add-money').addEventListener("click", function (eve
     const addMoney = document.getElementById('input-add-money').value;
     const pinNumber = document.getElementById('input-pin-number').value;
 
+    if (isNaN(addMoney)) {
+        alert("Failed to add money");
+        return;
+    }
+
 
     if (pinNumber === "1234") {
         // add money to the account
@@ -38,6 +43,13 @@ document.getElementById('btn-add-money').addEventListener("click", function (eve
         // new balance
         const newBalance = balanceNumber + addMoneyNumber;
         document.getElementById('account-balance').innerText = newBalance;
+
+        //    add to transaction history
+        const p = document.createElement('p');
+        p.innerText = `Added: ${addMoney} TK. New Balance ${newBalance}`;
+
+        // should be a common function
+        document.getElementById('transaction-container').appendChild(p);
 
     }
     else {
